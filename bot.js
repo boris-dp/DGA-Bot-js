@@ -21,7 +21,7 @@ client.on("message", (message) => {
 
   // Now we have to save the file.
   fs.writeFile("./config.json", JSON.stringify(config.prefix), (err) => console.error);
-    var checkPrefix fs.readFile("./config.json, JSON.stringify(config.prefix);
+    var checkPrefix = fs.readFile("./config.json", JSON.stringify(config.prefix));
     if(checkPrefix == newPrefix){
       message.channel.send("Changed prefix to " + newPrefix);
     }else{
