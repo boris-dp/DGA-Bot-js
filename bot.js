@@ -21,7 +21,12 @@ client.on("message", (message) => {
   config.prefix = newPrefix;
 
   // Now we have to save the file.
-  fs.writeFile("./config.json", JSON.stringify(config.prefix), (err) => console.error);
+  bool check = fs.writeFile("./config.json", JSON.stringify(config.prefix), (err) => console.error);
+    if(bool){
+      message.channel.send("Changed prefix to " + newPrefix);
+    }else{
+      message.channel.send("Prefix change failed");
+    }
   }
 });
 
