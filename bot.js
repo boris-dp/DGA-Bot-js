@@ -2,16 +2,8 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const responseObject = {
-  "ping": "pong"
-  "ayy": "Ayy, lmao!",
-  "wat": "Say what?",
-  "lol": "roflmaotntpmp"
-};
-
 const prefix = "!";
 
- 
 
 client.on('ready', () => {
 
