@@ -15,12 +15,13 @@ client.on("message", (message) => {
   }
   if(message.content.startsWith(config.prefix + "prefix")) {
   // Gets the prefix from the command (eg. "!prefix +" it will take the "+" from it)
+    message.channel.send("Enter new prefix!");
   let newPrefix = message.content.split(" ").slice(1, 2)[0];
   // change the configuration in memory
   config.prefix = newPrefix;
 
   // Now we have to save the file.
-  fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
+  fs.writeFile("./config.json", JSON.stringify(config.prefix), (err) => console.error);
   }
 });
 
