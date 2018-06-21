@@ -16,21 +16,6 @@ client.on("message", (message) => {
   if (message.content.startsWith(config.prefix + "hoer")) {
     message.channel.send("vuile slet!");
   }
-  if(message.content.startsWith(config.prefix + "prefix")) {
-  // Gets the prefix from the command (eg. "!prefix +" it will take the "+" from it)
-  let newPrefix = message.content.split(" ").slice(1, 2)[0];
-  // change the configuration in memory
-  config.prefix = newPrefix;
-
-  // Now we have to save the file.
-  fs.writeFile("./config.json", JSON.stringify(config.prefix), (err) => console.error);
-    var checkPrefix = fs.readFile("./config.json", JSON.stringify(config.prefix));
-    if(checkPrefix == newPrefix){
-      message.channel.send("Changed prefix to " + newPrefix);
-    }else{
-      message.channel.send("Prefix change failed");
-    }
-  }
 });
 
 client.login(config.token);
