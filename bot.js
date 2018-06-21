@@ -17,12 +17,14 @@ client.on('ready', () => {
 
 });
 
- 
+client.on('message', message => {
 
-client.on("message", (message) => {
-  if(responseObject[message.content]) {
-    message.reply(responseObject[message.content]);
-  }
+    if (message.content === 'ping') {
+
+       message.reply('hoer');
+
+       }
+
 });
 
 client.on('ready', () => {
