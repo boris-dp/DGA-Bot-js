@@ -3,6 +3,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 
+bot.on("ready", () => {
+  bot.user.setGame('?help')
+});
+
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(config.prefix) || message.author.bot) return;
