@@ -21,6 +21,10 @@ client.on('message', message => {
        }
 
 });
+
+client.on('ready', () => {
+  client.user.setGame('Hey')
+});
  
 
 // THIS  MUST  BE  THIS  WAY
