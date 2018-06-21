@@ -2,8 +2,6 @@ const fs = require("fs")
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-const args = message.content.slice(prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
 
 client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
@@ -14,9 +12,6 @@ client.on("message", (message) => {
   } else
   if (message.content.startsWith(config.prefix + "foo")) {
     message.channel.send("bar!");
-  }
-  if (command === 'blah') {
-  message.channel.send('Meh.');
   }
   if(message.content.startsWith(config.prefix + "prefix")) {
   // Gets the prefix from the command (eg. "!prefix +" it will take the "+" from it)
