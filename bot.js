@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-client.on.setGame('Hey')
-
  
 
 client.on('ready', () => {
@@ -24,6 +22,7 @@ client.on('message', message => {
 
 });
 
+client.on.setGame('Hey');
  
 
 // THIS  MUST  BE  THIS  WAY
