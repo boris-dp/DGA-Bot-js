@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+bot.user.setGame('U moeder')
+
  
 
 client.on('ready', () => {
