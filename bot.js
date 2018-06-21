@@ -21,7 +21,7 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
   if(responseObject[message.content]) {
-    message.channel.send(responseObject[message.content]);
+    message.reply(responseObject[message.content]);
   }
 });
 
