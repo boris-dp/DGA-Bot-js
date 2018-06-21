@@ -2,6 +2,13 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+const responseObject = {
+  "ping": "pong"
+  "ayy": "Ayy, lmao!",
+  "wat": "Say what?",
+  "lol": "roflmaotntpmp"
+};
+
  
 
 client.on('ready', () => {
@@ -12,14 +19,10 @@ client.on('ready', () => {
 
  
 
-client.on('message', message => {
-
-    if (message.content === 'ping') {
-
-       message.reply('hoer');
-
-       }
-
+client.on("message", (message) => {
+  if(responseObject[message.content]) {
+    message.channel.send(responseObject[message.content]);
+  }
 });
 
 client.on('ready', () => {
