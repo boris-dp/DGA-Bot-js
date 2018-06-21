@@ -21,8 +21,6 @@ client.on('message', message => {
        }
 
 });
-
-client.on.setGame('Hey');
  
 
 // THIS  MUST  BE  THIS  WAY
