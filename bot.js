@@ -13,6 +13,9 @@ client.on("message", (message) => {
   if (message.content.startsWith(config.prefix + "foo")) {
     message.channel.send("bar!");
   }
+  if (message.content.startsWith(config.prefix + "hoer")) {
+    message.channel.send("vuile slet!");
+  }
   if(message.content.startsWith(config.prefix + "prefix")) {
   // Gets the prefix from the command (eg. "!prefix +" it will take the "+" from it)
   let newPrefix = message.content.split(" ").slice(1, 2)[0];
