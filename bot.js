@@ -9,6 +9,8 @@ const responseObject = {
   "lol": "roflmaotntpmp"
 };
 
+const prefix = "!";
+
  
 
 client.on('ready', () => {
@@ -17,14 +19,16 @@ client.on('ready', () => {
 
 });
 
-client.on('message', message => {
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
 
-    if (message.content === 'ping') {
-
-       message.reply('hoer');
-
-       }
-
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
+  } else
+  if (message.content.startsWith(prefix + "foo")) {
+    message.channel.send("bar!");
+  }
 });
 
 client.on('ready', () => {
